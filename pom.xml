@@ -1,11 +1,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>aws.container.services</groupId>
 	<artifactId>aws-container-services</artifactId>
 	<version>1.0.0</version>
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
 	<!-- ✅ Dependency Management Section: BOM should be outside dependencies -->
+	<dependencies>
+		<!-- AWS SDK for ECS -->
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>ecs</artifactId>
+		</dependency>
+		<!-- AWS SDK for EKS -->
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>eks</artifactId>
+		</dependency>
+		<!-- AWS SDK Auth Module -->
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>auth</artifactId>
+		</dependency>
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>2.0.7</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.11</version>
+		</dependency>
+	</dependencies>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -17,37 +50,4 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-	<dependencies>
-		<!-- AWS SDK for ECS -->
-		<dependency>
-			<groupId>software.amazon.awssdk</groupId>
-			<artifactId>ecs</artifactId>
-		</dependency>
-
-		<!-- AWS SDK for EKS -->
-		<dependency>
-			<groupId>software.amazon.awssdk</groupId>
-			<artifactId>eks</artifactId>
-		</dependency>
-
-		<!-- AWS SDK Auth Module -->
-		<dependency>
-			<groupId>software.amazon.awssdk</groupId>
-			<artifactId>auth</artifactId>
-		</dependency>
-
-		<!-- Logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<version>2.0.7</version>
-		</dependency>
-
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.2.11</version>
-		</dependency>
-	</dependencies>
 </project>
