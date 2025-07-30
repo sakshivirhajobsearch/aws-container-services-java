@@ -12,33 +12,33 @@
 
 	<!-- ✅ Dependency Management Section: BOM should be outside dependencies -->
 	<dependencies>
-		<!-- AWS SDK for ECS -->
+		<!-- AWS SDK v2 -->
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
 			<artifactId>ecs</artifactId>
+			<version>2.25.9</version>
 		</dependency>
-		<!-- AWS SDK for EKS -->
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
 			<artifactId>eks</artifactId>
+			<version>2.25.9</version>
 		</dependency>
-		<!-- AWS SDK Auth Module -->
+		<!-- JUnit 5 -->
 		<dependency>
-			<groupId>software.amazon.awssdk</groupId>
-			<artifactId>auth</artifactId>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.10.0</version>
+			<scope>test</scope>
 		</dependency>
-		<!-- Logging -->
+		<!-- Mockito -->
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<version>2.0.7</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.2.11</version>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>5.11.0</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
